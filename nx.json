@@ -25,6 +25,24 @@
     "demo-e2e": {
       "tags": [],
       "implicitDependencies": ["demo"]
+    },
+    "homepage": {
+      "tags": []
+    },
+    "products": {
+      "tags": []
+    },
+    "shopping-cart": {
+      "tags": []
+    },
+    "orders": {
+      "tags": []
+    },
+    "user-profile": {
+      "tags": []
+    },
+    "resource": {
+      "tags": []
     }
   }
 }

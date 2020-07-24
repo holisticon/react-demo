@@ -104,6 +104,168 @@
           }
         }
       }
+    },
+    "homepage": {
+      "root": "libs/homepage",
+      "sourceRoot": "libs/homepage/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/homepage/tsconfig.lib.json",
+              "libs/homepage/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/homepage/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/homepage/jest.config.js",
+            "tsConfig": "libs/homepage/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "products": {
+      "root": "libs/products",
+      "sourceRoot": "libs/products/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/products/tsconfig.lib.json",
+              "libs/products/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/products/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/products/jest.config.js",
+            "tsConfig": "libs/products/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shopping-cart": {
+      "root": "libs/shopping-cart",
+      "sourceRoot": "libs/shopping-cart/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/shopping-cart/tsconfig.lib.json",
+              "libs/shopping-cart/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shopping-cart/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shopping-cart/jest.config.js",
+            "tsConfig": "libs/shopping-cart/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "orders": {
+      "root": "libs/orders",
+      "sourceRoot": "libs/orders/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/orders/tsconfig.lib.json",
+              "libs/orders/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/orders/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/orders/jest.config.js",
+            "tsConfig": "libs/orders/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "user-profile": {
+      "root": "libs/user-profile",
+      "sourceRoot": "libs/user-profile/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/user-profile/tsconfig.lib.json",
+              "libs/user-profile/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/user-profile/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/user-profile/jest.config.js",
+            "tsConfig": "libs/user-profile/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "resource": {
+      "root": "libs/resource",
+      "sourceRoot": "libs/resource/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/resource/tsconfig.lib.json",
+              "libs/resource/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/resource/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/resource/jest.config.js",
+            "tsConfig": "libs/resource/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -122,19 +284,19 @@
     },
     "@nrwl/react": {
       "application": {
-        "style": "styled-components",
+        "style": "none",
         "linter": "eslint",
         "babel": true
       },
       "library": {
-        "style": "styled-components",
+        "style": "none",
         "linter": "eslint"
       },
       "storybook-configuration": {
         "linter": "eslint"
       },
       "component": {
-        "style": "styled-components"
+        "style": "none"
       }
     },
     "@nrwl/next": {
