@@ -15,6 +15,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "strict": true,
     "paths": {
       "@ngxp/homepage": ["libs/homepage/src/index.ts"],
       "@ngxp/products": ["libs/products/src/index.ts"],
