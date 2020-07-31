@@ -1,14 +1,16 @@
-import { useEffect, useState } from 'react';
-import { SearchResults } from '../domain/product';
+import { useEffect, useState, useContext } from 'react';
 import { searchProducts } from './products-api';
+import { ProductsContext, searchResultsLoadedAction, selectSearchResults } from './products-context';
 
 export const useSearchResults = (queryString: string | null) => {
-    const [searchResults, setSearchResults] = useState<SearchResults | null>(null);
+    const { state, dispatch } = useContext(ProductsContext);
 
     useEffect(() => {
         searchProducts(queryString)
-            .then(setSearchResults)
+            .then((searchResults) => dispatch(searchResultsLoadedAction(searchResults)))
     }, [queryString]);
 
-    return searchResults
+    return selectSearchResults()(state);
 };
+
+

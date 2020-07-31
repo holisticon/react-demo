@@ -16,13 +16,13 @@ export const Homepage = ({ onSearch }: HomepageProps) => {
 
     <ul className="row nav flex-column mt-5">
         <li className="nav-item">
-            <Link className="nav-link" to='shopping-cart'>Shopping Cart</Link>
+            <Link className="nav-link" to='/shopping-cart'>Shopping Cart</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to='user-profile'>User Profile</Link>
+            <Link className="nav-link" to='/user-profile'>User Profile</Link>
         </li>
         <li className="nav-item">
-            <Link className="nav-link" to='orders'>Orders</Link>
+            <Link className="nav-link" to='/orders'>Orders</Link>
         </li>
     </ul>
   </>
