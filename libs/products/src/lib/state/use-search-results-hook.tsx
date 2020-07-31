@@ -1,16 +1,19 @@
 import { useEffect, useState, useContext } from 'react';
 import { searchProducts } from './products-api';
-import { ProductsContext, searchResultsLoadedAction, selectSearchResults } from './products-context';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectSearchResults } from './products-selectors';
+import { searchProductsAction } from './products-actions';
 
 export const useSearchResults = (queryString: string | null) => {
-    const { state, dispatch } = useContext(ProductsContext);
+
+    const searchResults = useSelector(selectSearchResults);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        searchProducts(queryString)
-            .then((searchResults) => dispatch(searchResultsLoadedAction(searchResults)))
+        dispatch(searchProductsAction(queryString))
     }, [queryString]);
 
-    return selectSearchResults()(state);
+    return searchResults;
 };
 
 

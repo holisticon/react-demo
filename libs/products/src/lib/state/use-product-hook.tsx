@@ -1,20 +1,22 @@
-import { ResourceUri } from '@ngxp/resource';
-import { isUndefined, defaultTo } from 'lodash-es';
-import { useContext, useEffect } from 'react';
-import { loadProduct } from './products-api';
-import { ProductsContext, productLoadedAction, selectProduct } from './products-context';
+import { Resource, ResourceUri } from '@ngxp/resource';
+import { isNull } from 'lodash-es';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Product } from '../domain/product';
+import { loadProductAction } from './products-actions';
+import { selectProduct } from './products-selectors';
+import { ProductsState } from './products-slice';
 
 export const useProduct = (productUri: ResourceUri) => {
-    const { state, dispatch } = useContext(ProductsContext);
 
-    const product = selectProduct(productUri)(state);
+    const product = useSelector<{ products: ProductsState }, Resource<Product> | null>(state => selectProduct(state, productUri));
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        if (isUndefined(product)) {
-            loadProduct(productUri)
-                .then(p => dispatch(productLoadedAction(p)))
+        if (isNull(product)) {
+            dispatch(loadProductAction(productUri))
         }
-    }, [productUri, product]);
+    }, [productUri]);
 
-    return defaultTo(product, null);
+    return product;
 }
