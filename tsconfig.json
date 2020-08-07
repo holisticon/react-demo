@@ -22,10 +22,7 @@
       "@ngxp/shopping-cart": ["libs/shopping-cart/src/index.ts"],
       "@ngxp/orders": ["libs/orders/src/index.ts"],
       "@ngxp/user-profile": ["libs/user-profile/src/index.ts"],
-      "@ngxp/resource": ["libs/resource/src/index.ts"],
-      "@ngxp/shopping-cart-item-list": [
-        "libs/shopping-cart-item-list/src/index.ts"
-      ]
+      "@ngxp/resource": ["libs/resource/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
