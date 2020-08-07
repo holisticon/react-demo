@@ -3,7 +3,8 @@ import { Product } from '../../../domain/product';
 import { ProductImage } from '../../product-image/product-image';
 import { ProductPrice } from '../../product-price/product-price';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { Resource } from '@ngxp/resource';
+import { Resource, encodeResourceUriAsRouteParam } from '@ngxp/resource';
+import { AddToShoppingCartForm } from '@ngxp/shopping-cart';
 
 /* eslint-disable-next-line */
 export interface ProductListEntryProps {
@@ -19,15 +20,12 @@ export const ProductListEntry = ({ product }: ProductListEntryProps) => {
         </div>
 
         <div className="col-8">
-            <h2 className="h5 mb-1"><Link to={`${match.url}/${btoa(product._id)}`}>{product.productName}</Link></h2>
+            <h2 className="h5 mb-1"><Link to={`${match.url}/${encodeResourceUriAsRouteParam(product._id)}`}>{product.productName}</Link></h2>
             <p className="mb-1"><small>{product.productDescription}</small></p>
             <p><ProductPrice product={product}></ProductPrice></p>
         </div>
 
-        {/* // <ngxp-add-to-shopping-cart-form
-    //     className="col-2"
-    //     [product]="product | toResourceUri"
-    // ></ngxp-add-to-shopping-cart-form> */}
+        <AddToShoppingCartForm product={getUri(product)} />
     </li>;
 };
 

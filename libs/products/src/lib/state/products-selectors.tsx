@@ -19,10 +19,10 @@ export const selectSearchResults = createSelector(
                 .map(productUri => products[productUri])
         };
     }
-)
+);
 
 export const selectProduct = createSelector(
     selectProductsState,
     (_: any, productUri: string) => productUri,
     (state, productUri) => defaultTo(state.products[productUri], null)
-)
+);

@@ -3,9 +3,8 @@ import { isNull } from 'lodash-es';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Product } from '../domain/product';
-import { loadProductAction } from './products-actions';
 import { selectProduct } from './products-selectors';
-import { ProductsState } from './products-slice';
+import { ProductsState, loadProductAction } from './products-slice';
 
 export const useProduct = (productUri: ResourceUri) => {
 

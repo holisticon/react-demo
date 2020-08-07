@@ -266,6 +266,36 @@
           }
         }
       }
+    },
+    "shopping-cart-item-list": {
+      "root": "libs/shopping-cart-item-list",
+      "sourceRoot": "libs/shopping-cart-item-list/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "libs/shopping-cart-item-list/tsconfig.lib.json",
+              "libs/shopping-cart-item-list/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shopping-cart-item-list/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shopping-cart-item-list/jest.config.js",
+            "tsConfig": "libs/shopping-cart-item-list/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
