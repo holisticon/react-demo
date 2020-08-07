@@ -2,6 +2,7 @@ import { ResourceWith } from '@ngxp/resource';
 import { createAsyncThunk, createSlice, AnyAction } from '@reduxjs/toolkit';
 import { AdditionToShoppingCart, QuantityUpdate, ShoppingCart, ShoppingCartItem } from '../domain/shopping-cart';
 import { addToShoppingCart, deleteShoppingCartItem, loadShoppingCart, updateShoppingCartItemQuantity } from './shopping-cart-api';
+import { placeOrderAction } from '@ngxp/orders';
 
 const sliceName = 'shoppingCart';
 
@@ -50,6 +51,10 @@ const shoppingCartSlice = createSlice({
             .addCase(updateShoppingCartItemQuantityAction.fulfilled, updateShoppingCartReducer)
             .addCase(deleteShoppingCartItemAction.fulfilled, updateShoppingCartReducer)
             .addCase(addToShoppingCartAction.fulfilled, updateShoppingCartReducer)
+            // TODO: Find better way to trigger reload of shopping cart
+            .addCase(placeOrderAction.fulfilled, (state) => {
+                state.shoppingCart = null;
+            })
     }
 });
 

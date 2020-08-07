@@ -25,7 +25,9 @@ export const ProductListEntry = ({ product }: ProductListEntryProps) => {
             <p><ProductPrice product={product}></ProductPrice></p>
         </div>
 
-        <AddToShoppingCartForm product={getUri(product)} />
+        <div className="col-2">
+            <AddToShoppingCartForm product={getUri(product)} />
+        </div>
     </li>;
 };
 

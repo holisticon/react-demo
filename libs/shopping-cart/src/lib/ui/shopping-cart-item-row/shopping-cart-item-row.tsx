@@ -12,7 +12,6 @@ export interface ShoppingCartItemRowProps {
 }
 
 export const ShoppingCartItemRow = ({ shoppingCartItem, deleteItem, updateQuantity }: ShoppingCartItemRowProps ) => {
-    debugger;
     const productRouteParam = encodeResourceUriAsRouteParam(shoppingCartItem.product);
     const shoppingCartItemPrice = shoppingCartItem.price.toFixed(2);
 

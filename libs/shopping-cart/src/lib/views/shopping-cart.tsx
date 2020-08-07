@@ -5,6 +5,8 @@ import { QuantityUpdate, ShoppingCartItem } from '../domain/shopping-cart';
 import { deleteShoppingCartItemAction, updateShoppingCartItemQuantityAction } from '../state/shopping-cart-slice';
 import { useShoppingCart } from '../state/use-shopping-cart-hook';
 import ShoppingCartItemList from '../ui/shopping-cart-item-list/shopping-cart-item-list';
+import { isNull, isEmpty } from 'lodash-es';
+import { PlaceOrderForm } from '@ngxp/orders';
 
 /* eslint-disable-next-line */
 export interface ShoppingCartProps {}
@@ -29,6 +31,8 @@ export const ShoppingCart = (props: ShoppingCartProps) => {
         onUpdateQuantity={onUpdateQuantity}
         onDelete={onDelete}
     ></ShoppingCartItemList>
+
+    {isNull(shoppingCart) || isEmpty(shoppingCart.items) ? null : <PlaceOrderForm orderItems={shoppingCart.items} ></PlaceOrderForm>}
   </>);
 };
 
