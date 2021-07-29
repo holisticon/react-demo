@@ -1,4 +1,4 @@
-import { getUris, ResourceMap, ResourceUri, toMap } from '@ngxp/resource';
+import { getUris, ResourceMap, ResourceUri, toMap } from '@holisticon/resource';
 import { createReducer, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { Product } from '../domain/product';
 import { searchProducts, loadProduct } from './products-api';

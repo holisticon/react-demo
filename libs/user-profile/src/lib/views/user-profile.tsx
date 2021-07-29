@@ -1,4 +1,4 @@
-import { getUri } from '@ngxp/resource';
+import { getUri } from '@holisticon/resource';
 import React from 'react';
 import { useAddresses, usePaymentOptions, useUserProfile } from '../state/use-user-profile-hook';
 import Address from '../ui/address/address';

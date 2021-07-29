@@ -1,7 +1,7 @@
 import React, { lazy} from 'react';
 import {Link} from 'react-router-dom';
 
-const ProductSearchForm = lazy(() => import('@ngxp/products').then(m => ({ default: m.ProductSearchForm })));
+const ProductSearchForm = lazy(() => import('@holisticon/products').then(m => ({ default: m.ProductSearchForm })));
 
 /* eslint-disable-next-line */
 export interface HomepageProps {

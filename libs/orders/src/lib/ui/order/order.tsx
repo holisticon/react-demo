@@ -1,6 +1,6 @@
 import React from 'react';
 import { Order as IOrder } from '../../domain/order';
-import { Address, PaymentOption } from '@ngxp/user-profile';
+import { Address, PaymentOption } from '@holisticon/user-profile';
 
 /* eslint-disable-next-line */
 export interface OrderProps {

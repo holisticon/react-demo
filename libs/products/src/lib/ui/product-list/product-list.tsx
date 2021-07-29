@@ -1,7 +1,7 @@
 import React from 'react';
 import { Product } from '../../domain/product';
 import ProductListEntry from './product-list-entry/product-list-entry';
-import { Resource } from '@ngxp/resource';
+import { Resource } from '@holisticon/resource';
 
 /* eslint-disable-next-line */
 export interface ProductListProps {

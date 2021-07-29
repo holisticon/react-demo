@@ -1,4 +1,4 @@
-import { Resource } from '@ngxp/resource';
+import { Resource } from '@holisticon/resource';
 import { isNull } from 'lodash-es';
 import { Product, SearchResults } from '../domain/product';
 

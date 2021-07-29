@@ -1,4 +1,4 @@
-import { getUri, Resource } from '@ngxp/resource';
+import { getUri, Resource } from '@holisticon/resource';
 import { AdditionToShoppingCart, QuantityUpdate, ShoppingCart, ShoppingCartItem } from '../domain/shopping-cart';
 
 export async function loadShoppingCart(): Promise<Resource<ShoppingCart>> {

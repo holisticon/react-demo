@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { UserProfile } from '../domain/user-profile';
 import { loadUserProfile } from './user-profile-api';
-import { Resource } from '@ngxp/resource';
+import { Resource } from '@holisticon/resource';
 
 const sliceName = 'userProfile';
 

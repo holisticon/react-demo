@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCart, QuantityUpdate, ShoppingCartItem } from '../../domain/shopping-cart';
-import { ResourceWith } from '@ngxp/resource';
+import { ResourceWith } from '@holisticon/resource';
 import { isNull } from 'lodash-es';
 import ShoppingCartItemRow from '../shopping-cart-item-row/shopping-cart-item-row';
 

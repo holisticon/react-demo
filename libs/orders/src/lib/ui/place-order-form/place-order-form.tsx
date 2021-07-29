@@ -1,6 +1,6 @@
 import React, { FormEvent, useState, useEffect } from 'react';
-import { IAddress, Address, IPaymentOption, PaymentOption, useUserProfile, useAddresses, usePaymentOptions } from '@ngxp/user-profile';
-import { getUri } from '@ngxp/resource';
+import { IAddress, Address, IPaymentOption, PaymentOption, useUserProfile, useAddresses, usePaymentOptions } from '@holisticon/user-profile';
+import { getUri } from '@holisticon/resource';
 import { OrderItem } from '../../domain/order';
 import { isEmpty, isUndefined } from 'lodash-es';
 import { useDispatch } from 'react-redux';

@@ -1,8 +1,8 @@
-import { ResourceWith } from '@ngxp/resource';
+import { ResourceWith } from '@holisticon/resource';
 import { createAsyncThunk, createSlice, AnyAction } from '@reduxjs/toolkit';
 import { AdditionToShoppingCart, QuantityUpdate, ShoppingCart, ShoppingCartItem } from '../domain/shopping-cart';
 import { addToShoppingCart, deleteShoppingCartItem, loadShoppingCart, updateShoppingCartItemQuantity } from './shopping-cart-api';
-import { placeOrderAction } from '@ngxp/orders';
+import { placeOrderAction } from '@holisticon/orders';
 
 const sliceName = 'shoppingCart';
 

@@ -1,4 +1,4 @@
-import { ResourceWith } from '@ngxp/resource';
+import { ResourceWith } from '@holisticon/resource';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { QuantityUpdate, ShoppingCartItem } from '../domain/shopping-cart';
@@ -6,7 +6,7 @@ import { deleteShoppingCartItemAction, updateShoppingCartItemQuantityAction } fr
 import { useShoppingCart } from '../state/use-shopping-cart-hook';
 import ShoppingCartItemList from '../ui/shopping-cart-item-list/shopping-cart-item-list';
 import { isNull, isEmpty } from 'lodash-es';
-import { PlaceOrderForm } from '@ngxp/orders';
+import { PlaceOrderForm } from '@holisticon/orders';
 
 /* eslint-disable-next-line */
 export interface ShoppingCartProps {}
