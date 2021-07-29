@@ -4,7 +4,7 @@ import { Product, SearchResults } from '../domain/product';
 
 export async function searchProducts(queryString: string | null): Promise<Resource<SearchResults>> {
     const queryParams = isNull(queryString) ? '' : `?queryString=${encodeURIComponent(queryString)}`
-    return fetch(`https://example.hypercontract.org/products${queryParams}`)
+    return fetch(`https://webapp-demos-api.azurewebsites.net/products${queryParams}`)
         .then(r => r.json())
 }
 
