@@ -1,5 +1,5 @@
 {
-  "npmScope": "ngxp",
+  "npmScope": "holisticon",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {

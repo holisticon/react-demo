@@ -17,12 +17,12 @@
     "baseUrl": ".",
     "strict": true,
     "paths": {
-      "@ngxp/homepage": ["libs/homepage/src/index.ts"],
-      "@ngxp/products": ["libs/products/src/index.ts"],
-      "@ngxp/shopping-cart": ["libs/shopping-cart/src/index.ts"],
-      "@ngxp/orders": ["libs/orders/src/index.ts"],
-      "@ngxp/user-profile": ["libs/user-profile/src/index.ts"],
-      "@ngxp/resource": ["libs/resource/src/index.ts"]
+      "@holisticon/homepage": ["libs/homepage/src/index.ts"],
+      "@holisticon/products": ["libs/products/src/index.ts"],
+      "@holisticon/shopping-cart": ["libs/shopping-cart/src/index.ts"],
+      "@holisticon/orders": ["libs/orders/src/index.ts"],
+      "@holisticon/user-profile": ["libs/user-profile/src/index.ts"],
+      "@holisticon/resource": ["libs/resource/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

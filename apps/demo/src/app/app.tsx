@@ -2,11 +2,11 @@ import React, { lazy, Suspense, FunctionComponent } from 'react';
 import Navbar from './navbar/navbar';
 import { BrowserRouter as Router, Switch, Route, useLocation, useHistory, } from 'react-router-dom';
 
-const Homepage = lazy(() => import('@ngxp/homepage'));
-const Products = lazy(() => import('@ngxp/products').then(m => ({ default: m.Products })));
-const ShoppingCart = lazy(() => import('@ngxp/shopping-cart'));
-const Orders = lazy(() => import('@ngxp/orders'));
-const UserProfile = lazy(() => import('@ngxp/user-profile'));
+const Homepage = lazy(() => import('@holisticon/homepage'));
+const Products = lazy(() => import('@holisticon/products').then(m => ({ default: m.Products })));
+const ShoppingCart = lazy(() => import('@holisticon/shopping-cart'));
+const Orders = lazy(() => import('@holisticon/orders'));
+const UserProfile = lazy(() => import('@holisticon/user-profile'));
 
 export const App = () => <Router><Main /></Router>;
 

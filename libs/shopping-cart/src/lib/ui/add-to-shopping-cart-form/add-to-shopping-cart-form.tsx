@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import { Resource, ResourceUri } from '@ngxp/resource';
+import { Resource, ResourceUri } from '@holisticon/resource';
 import { useDispatch } from 'react-redux';
 import { addToShoppingCartAction } from '../../state/shopping-cart-slice';
 

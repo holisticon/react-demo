@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShoppingCartItem, QuantityUpdate } from '../../domain/shopping-cart';
-import { ResourceWith, encodeResourceUriAsRouteParam } from '@ngxp/resource';
+import { ResourceWith, encodeResourceUriAsRouteParam } from '@holisticon/resource';
 import { Link } from 'react-router-dom';
 import UpdateQuantityForm from '../update-quantity-form/update-quantity-form';
 

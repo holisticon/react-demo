@@ -2,8 +2,8 @@ import React from 'react';
 import { Product as IProduct } from '../../domain/product';
 import ProductImage from '../product-image/product-image';
 import ProductPrice from '../product-price/product-price';
-import { AddToShoppingCartForm } from '@ngxp/shopping-cart';
-import { Resource, getUri } from '@ngxp/resource';
+import { AddToShoppingCartForm } from '@holisticon/shopping-cart';
+import { Resource, getUri } from '@holisticon/resource';
 
 /* eslint-disable-next-line */
 export interface ProductProps {

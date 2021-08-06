@@ -1,4 +1,4 @@
-import { Resource } from '@ngxp/resource'
+import { Resource } from '@holisticon/resource'
 import { UserProfile } from '../domain/user-profile'
 
 export async function loadUserProfile(): Promise<Resource<UserProfile>> {

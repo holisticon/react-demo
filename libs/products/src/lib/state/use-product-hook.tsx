@@ -1,4 +1,4 @@
-import { Resource, ResourceUri } from '@ngxp/resource';
+import { Resource, ResourceUri } from '@holisticon/resource';
 import { isNull } from 'lodash-es';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

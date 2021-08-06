@@ -1,4 +1,4 @@
-import { Resource } from '@ngxp/resource';
+import { Resource } from '@holisticon/resource';
 import { NewOrder, OrderHistory } from '../domain/order';
 import { toNewOrderRequest } from './new-order-request.mapper';
 

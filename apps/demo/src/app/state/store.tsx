@@ -1,8 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit';
-import { reducer as productsReducer } from '@ngxp/products';
-import { reducer as shoppingCartReducer } from '@ngxp/shopping-cart';
-import { reducer as userProfileReducer } from '@ngxp/user-profile';
-import { reducer as ordersReducer } from '@ngxp/orders';
+import { reducer as productsReducer } from '@holisticon/products';
+import { reducer as shoppingCartReducer } from '@holisticon/shopping-cart';
+import { reducer as userProfileReducer } from '@holisticon/user-profile';
+import { reducer as ordersReducer } from '@holisticon/orders';
 
 export const store = configureStore({
     reducer: {

@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import { ShoppingCartItem, QuantityUpdate } from '../../domain/shopping-cart';
-import { ResourceWith } from '@ngxp/resource';
+import { ResourceWith } from '@holisticon/resource';
 
 /* eslint-disable-next-line */
 export interface UpdateQuantityFormProps {

@@ -1,5 +1,5 @@
 import { UserProfileState, loadUserProfileAction } from './user-profile-slice';
-import { Resource } from '@ngxp/resource';
+import { Resource } from '@holisticon/resource';
 import { UserProfile, Address, PaymentOption } from '../domain/user-profile';
 import { useEffect } from 'react';
 import { isNull } from 'lodash-es';

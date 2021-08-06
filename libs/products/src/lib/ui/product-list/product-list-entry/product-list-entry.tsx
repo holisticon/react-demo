@@ -3,8 +3,8 @@ import { Product } from '../../../domain/product';
 import { ProductImage } from '../../product-image/product-image';
 import { ProductPrice } from '../../product-price/product-price';
 import { Link, useRouteMatch } from 'react-router-dom';
-import { Resource, encodeResourceUriAsRouteParam, getUri } from '@ngxp/resource';
-import { AddToShoppingCartForm } from '@ngxp/shopping-cart';
+import { Resource, encodeResourceUriAsRouteParam, getUri } from '@holisticon/resource';
+import { AddToShoppingCartForm } from '@holisticon/shopping-cart';
 
 /* eslint-disable-next-line */
 export interface ProductListEntryProps {
