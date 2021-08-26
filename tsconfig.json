@@ -22,7 +22,8 @@
       "@holisticon/shopping-cart": ["libs/shopping-cart/src/index.ts"],
       "@holisticon/orders": ["libs/orders/src/index.ts"],
       "@holisticon/user-profile": ["libs/user-profile/src/index.ts"],
-      "@holisticon/resource": ["libs/resource/src/index.ts"]
+      "@holisticon/resource": ["libs/resource/src/index.ts"],
+      "@holisticon/testing": ["libs/testing/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
