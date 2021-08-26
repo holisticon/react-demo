@@ -13,3 +13,5 @@ const Wrapper = ({children}: PropsWithChildren<{}>) => {
 
 const customRender: typeof render = (ui, options) => 
   render(ui, {wrapper: Wrapper, ...options})
+
+export { customRender as render };
