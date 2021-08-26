@@ -1,11 +1,14 @@
+import { render } from '@holisticon/testing';
 import React from 'react';
-import { render } from '@testing-library/react';
-
 import Homepage from './homepage';
 
+
 describe(' Homepage', () => {
-  it('should render successfully', () => {
-    const { baseElement } = render(<Homepage />);
-    expect(baseElement).toBeTruthy();
-  });
+    const onSearch = jest.fn();
+
+    it('should render successfully', () => {
+        const { baseElement } = render(<Homepage onSearch={onSearch} />);
+        expect(baseElement).toBeTruthy();
+    });
+
 });
