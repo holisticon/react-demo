@@ -1,25 +1,35 @@
-import { Store } from '@reduxjs/toolkit';
+import { configureStore, Store } from '@reduxjs/toolkit';
 import { render } from '@testing-library/react';
+import { defaultTo, identity } from 'lodash-es';
 import React, { PropsWithChildren } from 'react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
+type RenderParameters = Parameters<typeof render>;
+type RenderReturnType = ReturnType<typeof render>
 
-const Wrapper = ({ children }: PropsWithChildren<{}>) => {
-    return (<MemoryRouter children={children}></MemoryRouter>)
+type Options = {
+    store?: Store
 }
 
-
-const StoreWrapper = ({ children, store }: PropsWithChildren<{ store: Store }>) => {
-    return <Provider store={store}>
-        <Wrapper children={children} />
+const createWrapper = ({ store }: Options) => ({ children }: PropsWithChildren<{}>) => (
+    <Provider store={defaultTo(store, noopStore)}>
+        <MemoryRouter>{children}</MemoryRouter>
     </Provider>
+);
+
+const noopStore = configureStore({
+    reducer: identity
+});
+
+const customRender = (
+    ui: RenderParameters[0],
+    options: Options = {},
+    renderOptions?: RenderParameters[1]
+): RenderReturnType => {
+    const wrapper = createWrapper(options);
+    return render(ui, { wrapper, ...renderOptions })
 }
 
-const customRender = (...[ui, options]: Parameters<typeof render>) =>
-    render(ui, { wrapper: Wrapper, ...options })
+export { customRender as render };
 
-const renderWithStore = (ui: Parameters<typeof render>[0], store: Store, options?: Parameters<typeof render>[1]) =>
-    render(ui, { wrapper: ({ children }) => <StoreWrapper store={store} children={children} />, ...options })
-
-export { customRender as render, renderWithStore };

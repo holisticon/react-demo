@@ -1,3 +1,3 @@
 
-export { render, renderWithStore } from './lib/testing';
+export { render } from './lib/testing';
 
