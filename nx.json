@@ -1,55 +1,63 @@
 {
-  "npmScope": "holisticon",
-  "implicitDependencies": {
-    "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
+    "npmScope": "holisticon",
+    "implicitDependencies": {
+        "workspace.json": "*",
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        "tslint.json": "*",
+        "nx.json": "*",
+        "tsconfig.base.json": "*",
+        ".eslintrc.json": "*"
     },
-    "tslint.json": "*",
-    "nx.json": "*",
-    "tsconfig.base.json": "*",
-    ".eslintrc.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/workspace/tasks-runners/default",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test", "e2e"]
+            }
+        }
+    },
+    "projects": {
+        "demo": {
+            "tags": []
+        },
+        "demo-e2e": {
+            "tags": [],
+            "implicitDependencies": ["demo"]
+        },
+        "homepage": {
+            "tags": []
+        },
+        "orders": {
+            "tags": []
+        },
+        "products": {
+            "tags": []
+        },
+        "resource": {
+            "tags": []
+        },
+        "shopping-cart": {
+            "tags": []
+        },
+        "testing": {
+            "tags": []
+        },
+        "user-profile": {
+            "tags": []
+        }
+    },
+    "affected": {
+        "defaultBase": "master"
+    },
+    "targetDependencies": {
+        "build": [
+            {
+                "target": "build",
+                "projects": "dependencies"
+            }
+        ]
     }
-  },
-  "projects": {
-    "demo": {
-      "tags": []
-    },
-    "demo-e2e": {
-      "tags": [],
-      "implicitDependencies": ["demo"]
-    },
-    "homepage": {
-      "tags": []
-    },
-    "products": {
-      "tags": []
-    },
-    "shopping-cart": {
-      "tags": []
-    },
-    "orders": {
-      "tags": []
-    },
-    "user-profile": {
-      "tags": []
-    },
-    "resource": {
-      "tags": []
-    },
-    "testing": {
-      "tags": []
-    }
-  },
-  "affected": {
-    "defaultBase": "master"
-  }
 }
