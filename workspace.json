@@ -71,7 +71,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/demo/jest.config.js",
-            "tsConfig": "apps/demo/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -126,7 +125,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/homepage/jest.config.js",
-            "tsConfig": "libs/homepage/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -153,7 +151,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/products/jest.config.js",
-            "tsConfig": "libs/products/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -180,7 +177,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/shopping-cart/jest.config.js",
-            "tsConfig": "libs/shopping-cart/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -207,7 +203,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/orders/jest.config.js",
-            "tsConfig": "libs/orders/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -234,7 +229,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/user-profile/jest.config.js",
-            "tsConfig": "libs/user-profile/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -261,7 +255,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/resource/jest.config.js",
-            "tsConfig": "libs/resource/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -288,7 +281,6 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/testing/jest.config.js",
-            "tsConfig": "libs/testing/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
