@@ -30,7 +30,7 @@
     "@reduxjs/toolkit": "1.4.0",
     "@types/react-redux": "7.1.9",
     "document-register-element": "1.13.1",
-    "lodash-es": "4.17.15",
+    "lodash-es": "4.17.21",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
